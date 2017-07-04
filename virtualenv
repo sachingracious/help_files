@@ -1,0 +1,25 @@
+:Install*
+
+$ pip install virtualenv virtualenvwrapper
+
+:Setup*
+
+$ echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.bashrc
+$ echo "export WORKON_HOME=$HOME/directory" >> ~/.bashrc
+$ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+$ source ~/.bashrc
+
+
+:Commands*
+
+$ mkvirtualenv "name" -p python"x" #starts new env with python x=2|3
+
+$ workon "virtualenv name"
+
+$ deactivate #Deactivating
+
+$ rmvirtualenv venv #delete
+
+$ lssitepackages
+
+

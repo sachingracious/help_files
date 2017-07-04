@@ -1,0 +1,29 @@
+:Fetch*
+
+$ wget https://bootstrap.pypa.io/get-pip.py
+
+:Install*
+
+$ python get-pip.py
+
+:Commands*
+
+$ pip install SomePackage            # latest version
+
+$ pip install SomePackage==1.0.4     # specific version
+
+$ pip install 'SomePackage>=1.0.4'     # minimum version
+
+$ pip freeze > requirements.txt
+
+$ pip install -r requirements.txt
+
+$ pip install --ignore-installed -d "offline directory" "package name"
+
+$ pip install --no-index --find-links "offline directory" "package name"
+
+$ pip install --no-index --find-links=/local/wheels -r requirements.txt
+
+$ pip uninstall SomePackage
+
+$ pip list

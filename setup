@@ -1,0 +1,13 @@
+#!/bin/bash
+mkdir $HOME/envs
+apt-get install build-essential pkg-config python-dev
+wget https://bootstrap.pypa.io/get-pip.py -P $HOME/Downloads
+python $HOME/Downloads/get-pip.py
+pip install --no-index --find-links /home/space/pip2/ virtualenv virtualenvwrapper
+echo "export WORKON_HOME=$HOME/envs" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+source ~/.bashrc
+mkvirtualenv python2 -p python2
+workon py2
+pip install --no-index --find-links /home/space/pip2/ numpy scipy matplotlib ipython jupyter pandas
+
